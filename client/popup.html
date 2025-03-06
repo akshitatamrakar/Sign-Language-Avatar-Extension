@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Language Avatar Popup</title>
+    <style>
+        body {
+            width: 400px;
+            height: 600px;
+            margin: 0;
+            padding: 10px;
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+        }
+        #canvas {
+            border: 2px solid #333;
+            border-radius: 8px;
+            background-color: #1E1E1E;
+            width: 400px;
+            height: 600px;
+        }
+        #wordDisplay {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #00FF00;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <canvas id="canvas" width="400" height="600"></canvas>
+        <div id="wordDisplay"></div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

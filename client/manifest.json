@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Caption Viewer",
+  "version": "1.0",
+  "description": "Captures and displays captions from YouTube videos",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "tabs",
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://www.youtube.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["captionsExtractor.js"],
+      "matches": ["*://www.youtube.com/*"]
+    }
+  ]
+}
